@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curriculum Vitae</title>
+<title>Contacto</title>
 
 <style>
 body {
@@ -17,7 +17,6 @@ body {
   color: white;
 }
 
-/* NAVBAR */
 .navbar {
   background-color: brown;
   padding: 10px;
@@ -56,18 +55,59 @@ body {
 }
 
 section {
-  margin: 20px;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 500px;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
 }
 
-img {
-  margin-top: 20px;
-  border-radius: 10px;
-  width: 200px;
-  max-width: 100%;
-  height: auto;
+form {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-top: 1em;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+textarea {
+  height: 5em;
+}
+
+.button {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: brown;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
 }
 
 @media (max-width: 768px) {
@@ -87,7 +127,8 @@ img {
   }
 
   section {
-    margin: 10px;
+    width: 90%;
+    margin: 20px auto;
   }
 }
 </style>
@@ -111,17 +152,33 @@ img {
 </nav>
 
 <section>
-  <h1>Curriculum Vitae</h1>
-  <img src="anderson.jpeg.jpeg">
-</section>
+  <h1>Contacto</h1>
 
-<section>
-  <h1>Datos Personales</h1>
-  <h2>Nombre: Anderson Abraham Mazariegos López</h2>
-  <h2>Dirección: Villa Lobos</h2>
-  <h2>Teléfono: 4714 1143</h2>
-  <h2>Email: andersomazariegoslopez@gmail.com</h2>
-  <h2>Edad: 16</h2>
+  <form action="https://formspree.io/f/mgorakqr" method="POST">
+
+    <ul>
+      <li>
+        <label>Nombre:</label>
+        <input type="text" name="name" required>
+      </li>
+
+      <li>
+        <label>Correo:</label>
+        <input type="email" name="email" required>
+      </li>
+
+      <li>
+        <label>Mensaje:</label>
+        <textarea name="message" required></textarea>
+      </li>
+
+      <li class="button">
+        <button type="submit">Enviar</button>
+      </li>
+    </ul>
+
+  </form>
+
 </section>
 
 <script>
